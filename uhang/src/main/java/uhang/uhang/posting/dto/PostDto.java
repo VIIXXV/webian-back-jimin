@@ -29,23 +29,6 @@ public class PostDto {
 //    private Member member;
     private Integer totalLike;
 
-    public Post toEntity(){
-        Post build = Post.builder()
-                .eventId(eventId)
-                .eventTitle(eventTitle)
-                .eventTime(eventTime)
-                .eventDate(eventDate)
-                .eventLoc(eventLoc)
-                .eventType(eventType)
-                .eventText(eventText)
-                .imageUrl(imageUrl)
-                .timeStamp(timeStamp)
-//                .member(member)
-                .totalLike(totalLike)
-                .build();
-        return build;
-    }
-
     // member builder에도 추가해주기
     @Builder
     public PostDto(Long eventId, String eventTitle, LocalTime eventTime, LocalDate eventDate,
